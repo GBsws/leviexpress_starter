@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 
-export const JourneyPicker = ({ onJourneyChange }) => (
+export const JourneyPicker = ({ onJourneyChange }) => {
+
+  const handleSubmit= (event)=>{
+    event.preventDefault()
+    console.log('Odesílám formulář s cestou')
+  }
+  return(
   <div className="journey-picker container">
     <h2 className="journey-picker__head">Kam chcete jet?</h2>
     <div className="journey-picker__body">
-      <form className="journey-picker__form">
+      <form onClick={handleSubmit} className="journey-picker__form">
         <label>
           <div className="journey-picker__label">Odkud:</div>
           <select>
@@ -41,6 +47,7 @@ export const JourneyPicker = ({ onJourneyChange }) => (
         </label>
         <div className="journey-picker__controls">
           <button 
+          
             className="btn" 
             type="submit"
           > 
@@ -52,3 +59,4 @@ export const JourneyPicker = ({ onJourneyChange }) => (
     </div>
   </div>
 );
+}
