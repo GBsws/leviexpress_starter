@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       element:<HomePage/>
     },
     {
-      path: '/reservation',
+      path: '/reservation/:id',
       element:<ReservationPage/>
     }
     ]
@@ -27,29 +27,3 @@ createRoot(document.querySelector('#app')).render(
   <RouterProvider router={router} />
 );
 
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <App />,
-//     errorElement: <ErrorPage />,
-//     children: [
-//       {
-//         path: '',
-//         element: <HomePage />,
-//       },
-//       {
-//         path: 'expenses',
-//         element: <ExpensesPage />,
-//       },
-//       {
-//         path: 'invoices',
-//         element: <InvoicesPage />,
-//       },
-//       {
-//         path: 'invoices/:idInvoice',
-//         element: <Invoice />,
-//       },
-//     ]
-//   },
-  
-// ]);
