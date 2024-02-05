@@ -31,6 +31,13 @@ footer {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+@media only screen and (min-width: 768px) {
+  header,
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 h2 {
   font-size: 1.5rem;
@@ -49,6 +56,11 @@ select:focus {
   outline: none;
 }
 
+button:not([disabled]),
+label {
+  cursor: pointer;
+}
+
 .btn {
   color: white;
   background-color: #ed6a5a;
@@ -60,6 +72,12 @@ select:focus {
   cursor: pointer;
 }
 
+.btn--big {
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+}
+
 .btn:hover {
   background-color: #eb5846;
 }
@@ -68,3 +86,9 @@ select:focus {
   background-color: lightgray;
   cursor: initial;
 }
+.controls.container {
+  width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
